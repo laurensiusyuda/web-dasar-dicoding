@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -9,6 +13,7 @@ h3 {
   color: #00a2c6;
 }
 
+/* Footer */
 footer {
   padding: 20px;
   color: white;
@@ -17,6 +22,8 @@ footer {
   font-weight: bold;
 }
 
+
+/* Header */
 nav a {
   font-size: 18px;
   font-weight: 400;
@@ -24,16 +31,18 @@ nav a {
   color: white;
 }
 
+
+/* Profile Bandung */
 /* psuedo selector */
 nav a:hover {
   font-weight: bold;
 }
-
-/* class selector */
 .profile header {
   text-align: center;
 }
 
+/* Image */
+/* class selector */
 .featured-image{
   width: 100%;
   max-height: 300px;
@@ -45,33 +54,70 @@ nav a:hover {
   width: 200px;
 }
 
+/* card content */
 .card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 20px;
-  margin-top: 20px;
 }
 
+/* header */
 .jumbotron {
   font-size: 20;
   padding: 60px;
   background-color: #00c8eb;
   text-align: center;
   color: white;
+}
+
+nav ul{
+  padding-inline: 4rem;
+  display: flex;  /* menerapkan flex-box */
+  gap: 2rem;
 
 }
 
 nav li {
-  display: inline;
   list-style-type: none;
-  margin-right: 20px;
 }
 
 nav {
   background-color: #00a2c6;
   padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+header {
+  display: inline;
 }
 
 main{
   padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+
 }
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  flex: 2;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {}
